@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 80vh; /* Фиксированная высота контейнера */
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.sidebar h2, .chat h2 {
+    margin-top: 0;
+}
+
+.role-selection {
+    margin-top: 20px;
+}
+
+.role-selection label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.role-selection select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+#uploadButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#uploadButton:hover {
+    background-color: #2980b9;
+}
+
+#fileName {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+.chat {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Занимает всю высоту контейнера */
+}
+
+#chatWindow {
+    flex-grow: 1;
+    overflow-y: auto; /* Включаем прокрутку */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    max-height: calc(100% - 150px); /* Новое значение высоты */
+}
+
+#askForm {
+    display: flex;
+    margin-top: 10px;
+}
+
+#query {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#askForm button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#askForm button:hover {
+    background-color: #2980b9;
+}
+
+
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 70%;
+}
+
+.message.user {
+    background-color: #3498db;
+    color: #fff;
+    align-self: flex-end;
+    margin-left: auto; /* Сообщение пользователя прижимается к правому краю */
+    margin-right: 0; /* Убираем отступ справа */
+}
+
+.message.bot {
+    background-color: #ecf0f1;
+    color: #333;
+    align-self: flex-start;
+}

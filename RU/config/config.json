@@ -1,0 +1,15 @@
+{
+    "ollama": {
+        "model_name": "llama3.1:8B",
+        "host": "http://localhost:11434"
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 5000
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/app.log"
+    },
+    "documents_path": "documents/"
+}

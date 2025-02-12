@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- The left part -->
+        <div class="sidebar">
+            <h2>Settings</h2>
+<form id="uploadForm">
+                <input type="file" id="file" name="file" accept="application/pdf" style="display: none;">
+                <button type="button" id="uploadButton">Download PDF</button>
+                <p id="fileName"></p>
+            </form>
+            <div class="role-selection">
+                <label for="role">Assistant role:</label>
+                <select id="role">
+                    <option value="assistant">Assistant</option>
+                    <option value="expert">The expert</option>
+                    <option value="translator">Translator</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Right part -->
+        <div class="chat">
+            <h2>Chat</h2>
+<div id="chatWindow"></div>
+			
+            <form id="askForm">
+                <input type="text" id="query" name="query" placeholder="Enter your question...">
+<button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
